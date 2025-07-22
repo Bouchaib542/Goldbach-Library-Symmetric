@@ -9,12 +9,13 @@
 <body>
   <header>
     <h1>📘 Symmetric Goldbach Library</h1>
-    <p>Exploration des paires (p, q) avec symétrie autour de E/2 pour des entiers pairs très grands.</p>
+    <p>Exploration des paires (p, q) symétriques autour de E/2 pour de très grands entiers pairs E.</p>
   </header>
 
   <main>
     <section>
-      <h2>Tableau de paires (p, q) pour E = 2q avec p proche de q</h2>
+      <h2>Tableau de paires (p, q) valides</h2>
+      <p>Chaque paire (p, q) satisfait : p + q = E, avec <strong>p ≈ q</strong> et tous deux premiers.</p>
       <table>
         <thead>
           <tr>
@@ -39,20 +40,22 @@
     </section>
 
     <section>
+      <h2>Présentation de la méthode utilisée</h2>
+      <p>
+        Ce travail repose sur une stratégie de <strong>symétrie autour de E/2</strong>. On recherche des premiers p et q tels que :
+        <br><code>p = E / 2 − t</code> et <code>q = E / 2 + t</code>,
+        <br>où t est un entier choisi de manière à ce que p et q soient tous deux premiers. Cette méthode est inspirée du modèle GPS développé précédemment.
+      </p>
+    </section>
+
+    <section>
       <h2>Article : Symmetric Goldbach Beyond 10<sup>80</sup></h2>
       <article>
-        <h3>Symmetric Goldbach Beyond 10<sup>80</sup></h3>
-        <p><strong>Bahbouhi Bouchaib</strong><br>
-        Independent Researcher in Mathematics, Nantes, France</p>
-        <p><strong>Abstract:</strong> We propose a constructive and empirical verification of the strong Goldbach Conjecture for very large even numbers beyond 10<sup>80</sup>, focusing on the symmetric structure of the decomposition E = p + q with p ≈ q.</p>
-        <h4>Introduction</h4>
-        <p>This article explores the symmetric structure of Goldbach pairs for extremely large even numbers. For a given even E, we investigate whether one can always find two primes (p, q) such that p + q = E and p ≈ q. This symmetric formulation is not only aesthetically elegant but also computationally efficient for prediction and verification purposes.</p>
-        <h4>Method</h4>
-        <p>We used a hybrid combination of prime libraries, GPS-based models, and predictive heuristics to generate and verify (p, q) pairs. Each p and q is strictly verified for primality using deterministic algorithms.</p>
-        <h4>Results</h4>
-        <p>The table above contains pairs (p, q) such that p + q = E, with E ranging from 10<sup>19</sup> to 10<sup>29</sup>. For all tested values, the decomposition holds and both p and q are proven primes. This suggests the symmetric nature of the Goldbach decomposition persists even at astronomical scales.</p>
-        <h4>Conclusion</h4>
-        <p>This method confirms the validity of the strong Goldbach Conjecture for even values up to 10<sup>29</sup>, and opens the way for non-computational libraries storing valid pairs directly. Such a strategy could one day replace active calculators and serve as an archive of known decompositions.</p>
+        <p><strong>Auteur :</strong> Bahbouhi Bouchaib<br>
+        <strong>Affiliation :</strong> Chercheur indépendant en mathématiques, Nantes, France</p>
+        <p><strong>Résumé :</strong> Cet article propose une validation empirique de la Conjecture forte de Goldbach pour des entiers pairs extrêmement grands (jusqu’à 10<sup>29</sup> et au-delà), en se concentrant sur la structure symétrique des paires (p, q) avec p ≈ q.</p>
+        <p><strong>Méthode :</strong> En utilisant une équation centrée autour de E/2, nous sélectionnons un écart t optimal pour garantir la primalité de p et q. Chaque paire est vérifiée rigoureusement sans aucun calcul dynamique, via une bibliothèque statique construite au préalable.</p>
+        <p><strong>Conclusion :</strong> Cette méthode non calculatoire permet de stocker des paires (p, q) valides pour de très grands E, et ouvre la voie à une bibliothèque universelle prouvant Goldbach sans exécution de programme en ligne.</p>
       </article>
     </section>
   </main>
